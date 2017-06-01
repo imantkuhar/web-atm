@@ -8,12 +8,12 @@ import org.apache.tomcat.util.codec.binary.Base64;
  */
 public class EncryptionService {
 
-    public static String encodeCardNumber(String cardNumber) {
+    public static String encode(String cardNumber) {
         byte[] bytesEncoded = Base64.encodeBase64(cardNumber.getBytes());
         return new String(bytesEncoded);
     }
 
-    public static String decodeCardNumber(byte[] bytesEncoded) {
+    public static String decode(byte[] bytesEncoded) {
         byte[] bytesDecoded = Base64.decodeBase64(bytesEncoded);
         return new String(bytesDecoded);
     }

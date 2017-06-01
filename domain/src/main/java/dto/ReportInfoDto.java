@@ -12,6 +12,6 @@ public class ReportInfoDto {
 
     private String cardNumber;
     private String date;
-    private int amountWithdraw;
+    private int removedAmount;
     private int balance;
 }

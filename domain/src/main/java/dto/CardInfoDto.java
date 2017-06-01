@@ -15,8 +15,10 @@ import java.util.Date;
 @AllArgsConstructor
 public class CardInfoDto {
 
+    private String cardNumber;
     private String fullName;
     private String address;
     private String date;
     private int balance;
+    private int removedAmount;
 }

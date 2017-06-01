@@ -9,7 +9,7 @@ import repository.CardRepository;
  * Created by Imant on 28.05.17.
  */
 @Service
-public class CardService implements BaseService<CardEntity> {
+public class CardService{
 
     @Autowired
     private CardRepository cardRepository;
@@ -22,8 +22,8 @@ public class CardService implements BaseService<CardEntity> {
         cardRepository.delete(cardEntity);
     }
 
-    public CardEntity find(int id) {
-        return cardRepository.findOne(id);
+    public CardEntity find(String cardNumber) {
+        return cardRepository.findOne(cardNumber);
     }
 
     public void update(CardEntity cardEntity) {

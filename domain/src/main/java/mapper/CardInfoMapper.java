@@ -14,12 +14,18 @@ import java.util.Calendar;
  */
 public class CardInfoMapper {
 
-    public static CardInfoDto convertToCardInfoDto(AccountEntity account, CardEntity card) {
+    public static CardInfoDto convertToCardInfoDto(CardEntity card) {
+        AccountEntity account = card.getAccountEntity();
+        String cardNumber = card.getNumber();
         String fullName = account.getFullName();
         String address = account.getAddress();
         String date = DateService.getCurrentDate();
         int balance = card.getBalance();
-        CardInfoDto cardInfoDto = new CardInfoDto(fullName, address, date, balance);
-        return cardInfoDto;
+        int removeAmount = 0;
+        CardInfoDto cardInfo = new CardInfoDto(cardNumber, fullName, address, date, balance, removeAmount);
+        return cardInfo;
     }
+
+//    public static CardEntity convertToCardEntity(CardInfoDto card){
+//    }
 }

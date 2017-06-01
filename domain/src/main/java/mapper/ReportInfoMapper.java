@@ -9,11 +9,12 @@ import util.DateService;
  */
 public class ReportInfoMapper {
 
-    public static ReportInfoDto convertToReportInfoDto(ReportEntity report, int amountWithdraw) {
+    public static ReportInfoDto convertToReportInfoDto(ReportEntity report) {
         String cardNumber = report.getCardNumber();
         String date = DateService.getCurrentDate();
         int balance = report.getBalance();
-        ReportInfoDto reportInfoDto = new ReportInfoDto(cardNumber, date, amountWithdraw, balance);
-        return reportInfoDto;
+        int amountToRemove = report.getAmountWithdraw();
+        ReportInfoDto reportInfo = new ReportInfoDto(cardNumber, date, amountToRemove, balance);
+        return reportInfo;
     }
 }
