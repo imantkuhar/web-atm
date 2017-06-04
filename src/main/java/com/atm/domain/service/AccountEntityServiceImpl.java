@@ -1,17 +1,20 @@
 package com.atm.domain.service;
 
 import com.atm.data.entity.AccountEntity;
-import com.atm.data.repository.AccountEntityRepositoryImpl;
+import com.atm.data.repository.AccountEntityRepository;
+import com.atm.data.repository.CardEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+@Service(value = "accountService")
 @Transactional
-public class AccountEntityServiceImpl implements BaseEntityService<AccountEntity> {
+public class AccountEntityServiceImpl implements AccountEntityService {
 
     @Autowired
-    private AccountEntityRepositoryImpl accountRepository;
+    @Qualifier("accountRepository")
+    private AccountEntityRepository accountRepository;
 
     @Override
     public void save(AccountEntity account) {
@@ -25,11 +28,6 @@ public class AccountEntityServiceImpl implements BaseEntityService<AccountEntity
 
     @Override
     public AccountEntity findById(long id) {
-        return accountRepository.getById(id);
-    }
-
-    @Override
-    public void delete(long id) {
-        accountRepository.delete(id);
+        return (AccountEntity) accountRepository.findById(id);
     }
 }

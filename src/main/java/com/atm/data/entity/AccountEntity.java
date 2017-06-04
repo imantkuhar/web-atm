@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class AccountEntity extends BaseEntity {
 
     @Column(name = "age")
-    private int age;
+    private Integer age;
 
     @Column(name = "full_name")
     private String fullName;
@@ -32,47 +32,5 @@ public class AccountEntity extends BaseEntity {
         this.fullName = fullName;
         this.address = address;
         this.job = job;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
-    }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "age=" + age +
-                ", fullName='" + fullName + '\'' +
-                ", address='" + address + '\'' +
-                ", job='" + job + '\'' +
-                '}';
     }
 }
