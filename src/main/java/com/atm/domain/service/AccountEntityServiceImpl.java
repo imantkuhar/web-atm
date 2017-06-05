@@ -28,6 +28,6 @@ public class AccountEntityServiceImpl implements AccountEntityService {
 
     @Override
     public AccountEntity findById(long id) {
-        return (AccountEntity) accountRepository.findById(id);
+        return accountRepository.findById(id);
     }
 }

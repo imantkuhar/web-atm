@@ -16,7 +16,7 @@ public class CardEntityServiceImpl implements CardEntityService {
 
     @Autowired
     @Qualifier("cardRepository")
-    CardEntityRepository cardRepository;
+    private CardEntityRepository cardRepository;
 
     @Override
     public void save(CardEntity card) {
@@ -30,7 +30,7 @@ public class CardEntityServiceImpl implements CardEntityService {
 
     @Override
     public CardEntity findById(long id) {
-        return (CardEntity) cardRepository.findById(id);
+        return cardRepository.findById(id);
     }
 
     @Override
