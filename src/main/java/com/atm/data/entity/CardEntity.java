@@ -37,7 +37,7 @@ public class CardEntity extends BaseEntity {
     @JoinColumn(name = "account_id")
     private AccountEntity accountEntity;
 
-    public CardEntity(String number, String password, int balance, Status status, AccountEntity accountEntity) {
+    public CardEntity(String number, String password, Integer balance, Status status, AccountEntity accountEntity) {
         this.number = number;
         this.password = password;
         this.balance = balance;

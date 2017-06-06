@@ -5,16 +5,17 @@ package com.atm.domain.dto.errorEnum;
  */
 public enum ErrorStatus {
     WRONG_CARD_NUMBER("WRONG_CARD_NUMBER"),
-    WRONG_CARD_PIN("WRONG_CARD_PIN"),
+    BLOCKED_CARD("BLOCKED_CARD"),
+    WRONG_CARD_PIN_CODE("WRONG_CARD_PIN_CODE"),
     WRONG_AMOUNT_OF_MONEY_TO_REMOVE("WRONG_AMOUNT_OF_MONEY_TO_REMOVE");
 
-    private String errorStatus;
+    private String massage;
 
-    ErrorStatus(String errorStatus) {
-        this.errorStatus = errorStatus;
+    ErrorStatus(String massage) {
+        this.massage = massage;
     }
 
-    public String getErrorStatus() {
-        return errorStatus;
+    public String getMassage() {
+        return massage;
     }
 }

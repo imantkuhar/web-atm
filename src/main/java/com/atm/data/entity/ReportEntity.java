@@ -17,18 +17,19 @@ public class ReportEntity extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "card_number")
+
     private CardEntity cardEntity;
 
     @Column(name = "date")
     private String date;
 
     @Column(name = "amount_withdraw")
-    private int amountWithdraw;
+    private Integer amountWithdraw;
 
     @Column(name = "balance")
-    private int balance;
+    private Integer balance;
 
-    public ReportEntity(CardEntity cardEntity, String date, int amountWithdraw, int balance) {
+    public ReportEntity(CardEntity cardEntity, String date, Integer amountWithdraw, Integer balance) {
         this.cardEntity = cardEntity;
         this.date = date;
         this.amountWithdraw = amountWithdraw;

@@ -4,6 +4,6 @@
     <title>WebATM</title>
 </head>
 <body>
-hi
+
 </body>
 </html>

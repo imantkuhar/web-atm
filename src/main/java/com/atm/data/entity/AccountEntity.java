@@ -27,7 +27,7 @@ public class AccountEntity extends BaseEntity {
     @Column(name = "job")
     private String job;
 
-    public AccountEntity(int age, String fullName, String address, String job) {
+    public AccountEntity(Integer age, String fullName, String address, String job) {
         this.age = age;
         this.fullName = fullName;
         this.address = address;
