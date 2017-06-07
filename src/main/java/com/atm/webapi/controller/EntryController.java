@@ -22,16 +22,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class EntryController {
 
     @Autowired
-    private AccountEntityService accountService;
-    @Autowired
     private CardEntityService cardService;
     @Autowired
     ReportEntityService reportService;
 
     private static final Integer PASSWORD_COUNTER = 4;
-    private static final String NEW_CLIENT_PASSWORD = "";
+    private static final String NEW_CLIENT_PASSWORD = "CLIENT_PASSWORD";
 
-    @RequestMapping(value = "/number-entry")
+    @RequestMapping(value = "/number-entry", method = RequestMethod.GET)
     public String game() {
         return "numberEntry";
     }

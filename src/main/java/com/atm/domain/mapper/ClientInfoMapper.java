@@ -20,8 +20,7 @@ public class ClientInfoMapper {
         String fullName = account.getFullName();
         String address = account.getAddress();
         Integer passwordCounter = 0;
-        String date = DateService.getCurrentDate();
-        ClientInfoDto clientDto = new ClientInfoDto(id, password, fullName, address, balance, passwordCounter, date);
+        ClientInfoDto clientDto = new ClientInfoDto(id, password, fullName, address, balance, passwordCounter);
         return clientDto;
     }
 }

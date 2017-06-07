@@ -17,14 +17,15 @@ public class ClientInfoDto {
     private Integer balance;
     private Integer passwordCounter;
     private String date;
+    private String cardNumber;
+    private Integer removedAmount;
 
-    public ClientInfoDto(Long id, String password, String fullName, String address, Integer balance, Integer passwordCounter, String date) {
+    public ClientInfoDto(Long id, String password, String fullName, String address, Integer balance, Integer passwordCounter) {
         this.id = id;
         this.password = password;
         this.fullName = fullName;
         this.address = address;
         this.balance = balance;
         this.passwordCounter = passwordCounter;
-        this.date = date;
     }
 }
