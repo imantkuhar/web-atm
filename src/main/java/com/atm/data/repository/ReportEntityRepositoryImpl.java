@@ -6,10 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-/**
- * Created by Imant on 05.06.17.
- */
-@Repository(value = "reportRepository")
+@Repository
 public class ReportEntityRepositoryImpl implements ReportEntityRepository {
 
     @PersistenceContext

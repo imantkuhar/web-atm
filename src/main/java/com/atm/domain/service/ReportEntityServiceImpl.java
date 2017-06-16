@@ -10,12 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by Imant on 05.06.17.
  */
-@Service(value = "reportService")
+@Service
 @Transactional
 public class ReportEntityServiceImpl implements ReportEntityService {
 
     @Autowired
-    @Qualifier("reportRepository")
     private ReportEntityRepository reportRepository;
 
     @Override

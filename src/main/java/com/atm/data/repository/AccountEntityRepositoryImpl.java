@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.PersistenceContext;
 
-@Repository(value = "accountRepository")
+@Repository
 public class AccountEntityRepositoryImpl implements AccountEntityRepository {
 
     @PersistenceContext

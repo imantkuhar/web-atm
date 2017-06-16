@@ -1,31 +1,27 @@
 package com.atm.domain.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import javax.management.relation.InvalidRelationTypeException;
+import lombok.NoArgsConstructor;
 
 /**
- * Created by Imant on 05.06.17.
+ * Created by Imant on 12.06.17.
  */
 @Data
+@NoArgsConstructor
 public class ClientInfoDto {
-    private Long id;
-    private String password;
+    String number;
+    String password;
     private String fullName;
     private String address;
-    private Integer balance;
-    private Integer passwordCounter;
     private String date;
-    private String cardNumber;
+    private Integer balance;
     private Integer removedAmount;
 
-    public ClientInfoDto(Long id, String password, String fullName, String address, Integer balance, Integer passwordCounter) {
-        this.id = id;
+    public ClientInfoDto(String number, String password, String fullName, String address, Integer balance) {
+        this.number = number;
         this.password = password;
         this.fullName = fullName;
         this.address = address;
         this.balance = balance;
-        this.passwordCounter = passwordCounter;
     }
 }

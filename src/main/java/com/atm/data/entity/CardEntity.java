@@ -13,12 +13,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "CARDS")
-@NamedQuery(name = CardEntity.FIND_CARD_BY_NUMBER,
-        query = "SELECT c FROM CardEntity c WHERE c.number = :number")
-
+@NamedQueries({
+        @NamedQuery(name = CardEntity.FIND_CARD_BY_NUMBER, query = "SELECT c FROM CardEntity c WHERE c.number = :number"),
+        @NamedQuery(name = CardEntity.GET_CARD_STATUS_BY_NUMBER, query = "SELECT c.status FROM CardEntity c WHERE c.number = :number"),
+        @NamedQuery(name=CardEntity.FIND_CARD_BY_NUMBER_AND_PASSWORD, query="SELECT c FROM CardEntity c WHERE " +
+                "c.number = :number AND c.password = :password"),
+})
 public class CardEntity extends BaseEntity {
 
-    public static final String FIND_CARD_BY_NUMBER = "FindCardByNumber";
+    public static final String FIND_CARD_BY_NUMBER = "findCardByNumber";
+    public static final String GET_CARD_STATUS_BY_NUMBER = "getCardStatusByNumber";
+    public static final String FIND_CARD_BY_NUMBER_AND_PASSWORD = "findCardByNumberAndPassword";
 
     @Column(name = "number", unique=true)
     private String number;

@@ -2,20 +2,21 @@ package com.atm.domain.service;
 
 import com.atm.data.entity.CardEntity;
 import com.atm.data.repository.CardEntityRepository;
+import com.atm.domain.dto.ClientInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * Created by Imant on 04.06.17.
  */
-@Service(value = "cardService")
+@Service
 @Transactional
 public class CardEntityServiceImpl implements CardEntityService {
 
     @Autowired
-    @Qualifier("cardRepository")
     private CardEntityRepository cardRepository;
 
     @Override
@@ -36,5 +37,15 @@ public class CardEntityServiceImpl implements CardEntityService {
     @Override
     public CardEntity findCardByNumber(String string) {
         return cardRepository.findCardByNumber(string);
+    }
+
+    @Override
+    public List getCardStatusByNumber(String string) {
+        return cardRepository.getCardStatusByNumber(string);
+    }
+
+    @Override
+    public List findCardByNumberAndPassword(ClientInfoDto client) {
+        return cardRepository.findCardByNumberAndPassword(client);
     }
 }

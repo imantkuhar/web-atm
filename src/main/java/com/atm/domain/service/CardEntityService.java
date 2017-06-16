@@ -1,12 +1,13 @@
 package com.atm.domain.service;
 
 import com.atm.data.entity.CardEntity;
-import org.springframework.stereotype.Service;
+import com.atm.domain.dto.ClientInfoDto;
+
+import java.util.List;
 
 /**
  * Created by Imant on 28.05.17.
  */
-@Service
 public interface CardEntityService {
 
     void save(CardEntity card);
@@ -16,4 +17,8 @@ public interface CardEntityService {
     CardEntity findById(long id);
 
     CardEntity findCardByNumber(String string);
+
+    List getCardStatusByNumber(String string);
+
+    List findCardByNumberAndPassword(ClientInfoDto client);
 }

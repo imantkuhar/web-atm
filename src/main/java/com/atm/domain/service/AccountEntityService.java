@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by Imant on 28.05.17.
  */
-@Service
 public interface AccountEntityService {
 
     void save(AccountEntity account);

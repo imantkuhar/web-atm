@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by Imant on 05.06.17.
  */
-@Service
 public interface ReportEntityService {
 
     void save(ReportEntity report);
