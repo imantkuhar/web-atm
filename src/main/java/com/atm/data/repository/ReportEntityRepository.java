@@ -6,7 +6,5 @@ public interface ReportEntityRepository {
 
     void save(ReportEntity report);
 
-    void update(ReportEntity report);
-
     ReportEntity findById(long id);
 }

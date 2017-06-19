@@ -6,39 +6,7 @@
 <html>
 <head>
     <title>WebATM</title>
-    <style>
-        .container {
-            height: 260px;
-            width: 330px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -130px 0 0 -190px;
-            border-radius: 5px;
-            background-color: #a2d6f2;
-            padding: 20px;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            width: 100%;
-            color: white;
-            margin-top: 10px;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        p {
-            text-align: center;
-            font: normal 16px/18px Arial, Helvetica, Sans-serif;
-        }
-    </style>
+    <link href="../../static/css/atm.css" st rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -49,11 +17,11 @@
     <p><label>Balance: ${client.balance}</label></p>
 
     <form method="POST" action="redirect-operations">
-        <input type="submit" value="BACK">
+        <input class="first" type="submit" value="BACK">
     </form>
 
     <form method="GET" action="/">
-        <input type="submit" value="EXIT">
+        <input class="first" type="submit" value="EXIT">
     </form>
 
 </div>

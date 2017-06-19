@@ -3,8 +3,8 @@ package com.atm;
 import com.atm.data.entity.AccountEntity;
 import com.atm.data.entity.CardEntity;
 import com.atm.data.entity.Status;
-import com.atm.domain.service.AccountEntityService;
-import com.atm.domain.service.CardEntityService;
+import com.atm.domain.service.AccountService;
+import com.atm.domain.service.CardService;
 import com.atm.domain.util.EncryptionUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,9 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WebApplication implements CommandLineRunner {
 
     @Autowired
-    AccountEntityService accountService;
+    AccountService accountService;
     @Autowired
-    CardEntityService cardService;
+    CardService cardService;
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

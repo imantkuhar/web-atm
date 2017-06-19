@@ -12,16 +12,16 @@ public class ClientInfoDto {
     String number;
     String password;
     private String fullName;
+    private boolean confirmedNumber = false;
+    private boolean fullAccess = false;
+    private int passwordCounter = 1;
     private String address;
-    private String date;
     private Integer balance;
-    private Integer removedAmount;
+    private String date;
+    private Integer withdrawAmount;
 
-    public ClientInfoDto(String number, String password, String fullName, String address, Integer balance) {
+    public ClientInfoDto(String number, String password) {
         this.number = number;
         this.password = password;
-        this.fullName = fullName;
-        this.address = address;
-        this.balance = balance;
     }
 }

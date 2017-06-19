@@ -1,6 +1,5 @@
 package com.atm.data.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -23,16 +22,16 @@ public class ReportEntity extends BaseEntity {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "amount_withdraw")
-    private Integer amountWithdraw;
+    @Column(name = "withdraw_amount")
+    private Integer withdrawAmount;
 
     @Column(name = "balance")
     private Integer balance;
 
-    public ReportEntity(CardEntity cardEntity, String date, Integer amountWithdraw, Integer balance) {
+    public ReportEntity(CardEntity cardEntity, String date, Integer withdrawAmount, Integer balance) {
         this.cardEntity = cardEntity;
         this.date = date;
-        this.amountWithdraw = amountWithdraw;
+        this.withdrawAmount = withdrawAmount;
         this.balance = balance;
     }
 }

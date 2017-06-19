@@ -15,8 +15,8 @@ public class ClientInfoMapper {
         client.setBalance(card.getBalance());
         client.setFullName(card.getAccountEntity().getFullName());
         client.setAddress(card.getAccountEntity().getAddress());
+        client.setFullAccess(true);
     }
-
 }
 
 

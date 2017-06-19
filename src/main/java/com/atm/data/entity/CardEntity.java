@@ -1,6 +1,5 @@
 package com.atm.data.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

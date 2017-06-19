@@ -1,13 +1,7 @@
 package com.atm.webapi.controller;
 
-import com.atm.data.entity.CardEntity;
-import com.atm.data.entity.ReportEntity;
 import com.atm.domain.dto.ClientInfoDto;
-import com.atm.domain.dto.errorEnum.ErrorStatus;
-import com.atm.domain.service.CardEntityService;
-import com.atm.domain.service.ReportEntityService;
-import com.atm.domain.util.DateUtil;
-import com.atm.domain.util.EncryptionUtil;
+import com.atm.webapi.service.ReportWebService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -25,9 +19,7 @@ import java.util.Map;
 public class ReportController {
 
     @Autowired
-    CardEntityService cardService;
-    @Autowired
-    ReportEntityService reportService;
+    ReportWebService reportWebService;
 
     @RequestMapping(value = "/redirect-report", method = RequestMethod.POST)
     public String redirectWithdrawReport(@ModelAttribute("client") ClientInfoDto client,
@@ -39,22 +31,7 @@ public class ReportController {
     @RequestMapping(value = "/report", method = RequestMethod.GET)
     public ModelAndView withdrawReport(HttpServletRequest request, @ModelAttribute("client") ClientInfoDto client) {
         Map<String, ?> map = RequestContextUtils.getInputFlashMap(request);
-        if (map != null) {
-            Integer removedAmount = client.getRemovedAmount();
-            if (removedAmount == null || removedAmount == 0 || removedAmount > client.getBalance()) {
-                return new ModelAndView("card_withdraw_money_error", "errorMassage", ErrorStatus.WRONG_AMOUNT_OF_MONEY_TO_REMOVE.getMassage());
-            }
-            Integer newBalance = client.getBalance() - removedAmount;
-            CardEntity card = cardService.findCardByNumber(EncryptionUtil.encode(client.getNumber()));
-            card.setBalance(newBalance);
-            cardService.update(card);
-
-            ReportEntity report = new ReportEntity(card, DateUtil.getCurrentDate(), removedAmount, newBalance);
-            reportService.save(report);
-
-            client.setBalance(newBalance);
-            client.setDate(DateUtil.getCurrentDate());
-            return new ModelAndView("account_report", "client", client);
-        } else return new ModelAndView("redirect:/");
+        ModelAndView model = reportWebService.withdrawReport(map, client);
+        return model;
     }
 }

@@ -2,12 +2,11 @@ package com.atm.domain.util;
 
 
 import org.apache.tomcat.util.codec.binary.Base64;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by Imant on 29.05.17.
  */
-@Component
+
 public class EncryptionUtil {
 
     public static String encode(String cardNumber) {

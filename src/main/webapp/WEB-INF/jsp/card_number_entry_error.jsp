@@ -6,44 +6,7 @@
 <html>
 <head>
     <title>WebATM</title>
-    <style>
-        .container {
-            height: 260px;
-            width: 330px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -130px 0 0 -190px;
-            border-radius: 5px;
-            background-color: #a2d6f2;
-            padding: 20px;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            width: 100%;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        p.title {
-            text-align: center;
-            font: bold 26px Arial, Helvetica, Sans-serif;
-            color: red;
-        }
-
-        p.massage {
-            text-align: center;
-            font: normal 20px Arial, Helvetica, Sans-serif;
-        }
-    </style>
+    <link href="../../static/css/atm.css" st rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -54,7 +17,7 @@
 
     <spring:form modelAttribute="client">
         <form action="/" method="GET">
-            <input type="submit" value="BACK">
+            <input class="second" type="submit" value="BACK">
         </form>
     </spring:form>
 
