@@ -13,7 +13,7 @@
     <spring:form method="POST" modelAttribute="client" action="redirect-pin-code-entry">
 
         <p><label>Entry you card number</label></p>
-        <spring:input path="number" placeholder="You card number..." maxlength="4"/><br/>
+        <spring:input path="number" placeholder="You card number..." maxlength="16"/><br/>
 
         <input class="second" type="submit" value="OK">
 

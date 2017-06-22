@@ -21,7 +21,7 @@ public class CardWebService {
     @Autowired
     CardService cardService;
 
-    private static final int CARD_NUMBER_LENGTH = 4;
+    private static final int CARD_NUMBER_LENGTH = 16;
 
     public ModelAndView pinCodeEntry(Map<String, ?> map, ClientInfoDto client) {
         if (map != null) {

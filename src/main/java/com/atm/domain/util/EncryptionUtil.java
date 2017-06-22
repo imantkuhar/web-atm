@@ -1,12 +1,10 @@
 package com.atm.domain.util;
 
-
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.commons.codec.binary.Base64;
 
 /**
  * Created by Imant on 29.05.17.
  */
-
 public class EncryptionUtil {
 
     public static String encode(String cardNumber) {
