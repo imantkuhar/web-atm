@@ -17,7 +17,7 @@
 
     <spring:form modelAttribute="client">
         <form action="redirect-pin-code-entry" method="POST">
-            <input class="second" type="submit" value="BACK">
+            <input type="submit" value="BACK">
         </form>
     </spring:form>
 

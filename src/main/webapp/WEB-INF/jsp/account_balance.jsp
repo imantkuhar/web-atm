@@ -11,17 +11,17 @@
 <body>
 <div class="container">
 
-    <p><label>Name: ${client.fullName}</label></p>
-    <p><label>Address: ${client.address}</label></p>
-    <p><label>Date: ${client.date}</label></p>
-    <p><label>Balance: ${client.balance}</label></p>
+    <p><label>NAME: ${client.fullName}</label></p>
+    <p><label>ADDRESS: ${client.address}</label></p>
+    <p><label>DATE: ${client.date}</label></p>
+    <p><label>BALANCE: ${client.balance}</label></p>
 
     <form method="POST" action="redirect-operations">
-        <input class="first" type="submit" value="BACK">
+        <input class="third" type="submit" value="BACK">
     </form>
 
     <form method="GET" action="/">
-        <input class="first" type="submit" value="EXIT">
+        <input class="third" type="submit" value="EXIT">
     </form>
 
 </div>

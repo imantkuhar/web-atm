@@ -17,7 +17,7 @@
 
     <spring:form modelAttribute="client">
         <form action="/" method="GET">
-            <input class="second" type="submit" value="BACK">
+            <input type="submit" value="BACK">
         </form>
     </spring:form>
 

@@ -1,14 +1,22 @@
+com/atm/domain/service/AccountServiceImpl.class
 com/atm/domain/util/EncryptionUtil.class
 com/atm/domain/util/DateUtil.class
 com/atm/data/entity/ReportEntity.class
 com/atm/webapi/WebConfiguration.class
+com/atm/domain/service/CardService.class
 com/atm/data/repository/ReportEntityRepositoryImpl.class
 com/atm/data/repository/CardEntityRepositoryImpl.class
+com/atm/domain/service/CardServiceImpl.class
 com/atm/data/entity/Status.class
+com/atm/domain/service/AccountService.class
+com/atm/webapi/service/OperationsWebService.class
 com/atm/WebApplication.class
+com/atm/domain/service/ReportService.class
 com/atm/data/repository/AccountEntityRepositoryImpl.class
 com/atm/webapi/controller/ReportController.class
 com/atm/webapi/controller/CardController.class
+com/atm/webapi/service/ReportWebService.class
+com/atm/webapi/service/CardWebService.class
 com/atm/data/entity/CardEntity.class
 com/atm/data/entity/AccountEntity.class
 com/atm/domain/dto/errorEnum/ErrorStatus.class
@@ -19,3 +27,4 @@ com/atm/data/repository/CardEntityRepository.class
 com/atm/webapi/controller/OperationsController.class
 com/atm/data/entity/BaseEntity.class
 com/atm/data/repository/AccountEntityRepository.class
+com/atm/domain/service/ReportServiceImpl.class

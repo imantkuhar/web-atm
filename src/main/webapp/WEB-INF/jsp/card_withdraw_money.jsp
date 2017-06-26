@@ -12,19 +12,19 @@
 <div class="container">
     <spring:form method="POST" modelAttribute="client" action="redirect-report">
 
-        <p><label>Entry you amount</label></p>
-        <spring:input type="number" pattern="[0-9]{10}" path="withdrawAmount" minlength="1" maxlength="8"/><br/>
+        <p><label>ENTRY YOU AMOUNT</label></p>
+        <spring:input type="number" pattern="[0-9]{10}" path="withdrawAmount" min="1" max="10000"/><br/>
 
-        <input class="third" type="submit" value="OK">
+        <input class="first" type="submit" value="OK">
 
     </spring:form>
 
     <form method="POST" action="redirect-operations">
-        <input class="third" type="submit" value="BACK">
+        <input class="first" type="submit" value="BACK">
     </form>
 
     <form method="GET" action="/">
-        <input class="third" type="submit" value="EXIT">
+        <input class="first" type="submit" value="EXIT">
     </form>
 </div>
 </body>

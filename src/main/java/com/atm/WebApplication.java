@@ -23,7 +23,6 @@ public class WebApplication implements CommandLineRunner {
         SpringApplication.run(WebApplication.class, args);
     }
 
-
     @Override
     public void run(String... strings) throws Exception {
 //        testData();
@@ -37,15 +36,15 @@ public class WebApplication implements CommandLineRunner {
         accountService.save(account2);
         accountService.save(account3);
 
-        String number1 = EncryptionUtil.encode("1111111111111111");
+        String number1 = EncryptionUtil.encode("0000000000000001");
         String password1 = EncryptionUtil.encode("1111");
         CardEntity cardEntity1 = new CardEntity(number1, password1, 10000, Status.FREE, account1);
 
-        String number2 = EncryptionUtil.encode("2222222222222222");
+        String number2 = EncryptionUtil.encode("0000000000000002");
         String password2 = EncryptionUtil.encode("2222");
         CardEntity cardEntity2 = new CardEntity(number2, password2, 20000, Status.FREE, account2);
 
-        String number3 = EncryptionUtil.encode("3333333333333333");
+        String number3 = EncryptionUtil.encode("0000000000000003");
         String password3 = EncryptionUtil.encode("3333");
         CardEntity cardEntity3 = new CardEntity(number3, password3, 30000, Status.FREE, account3);
 

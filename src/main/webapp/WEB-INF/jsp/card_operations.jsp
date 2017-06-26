@@ -12,15 +12,15 @@
 <div class="container">
 
     <form action="redirect-balance" method="POST">
-        <input class="first" type="submit" value="BALANCE">
+        <input class="second" type="submit" value="BALANCE">
     </form>
 
     <form action="redirect-withdraw" method="POST">
-        <input class="first" type="submit" value="WITHDRAWAL">
+        <input class="third" type="submit" value="WITHDRAWAL">
     </form>
 
     <form action="/" method="GET">
-        <input class="first" type="submit" value="EXIT">
+        <input class="third" type="submit" value="EXIT">
     </form>
 
 </div>

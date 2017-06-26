@@ -16,7 +16,7 @@
     <br><br>
 
     <form method="POST" action="redirect-withdraw">
-            <input class="second" type="submit" value="BACK">
+            <input type="submit" value="BACK">
     </form>
 
 </div>

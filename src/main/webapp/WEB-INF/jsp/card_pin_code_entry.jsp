@@ -12,15 +12,15 @@
 <div class="container">
     <spring:form action="redirect-operations" modelAttribute="client" method="POST">
 
-        <p><label>Entry you password</label></p>
+        <p><label>ENTRY YOU PASSWORD</label></p>
         <spring:input type="password" path="password" placeholder="You password..." maxlength="4"/><br/>
-        <input class="third" type="submit" value="OK">
+        <input class="first" type="submit" value="OK">
 
     </spring:form>
 
     <spring:form action="/" method="GET">
 
-        <input class="third" type="submit" value="BACK">
+        <input class="first" type="submit" value="BACK">
 
     </spring:form>
 </div>

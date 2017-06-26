@@ -12,10 +12,10 @@
 <div class="container">
     <spring:form method="POST" modelAttribute="client" action="redirect-pin-code-entry">
 
-        <p><label>Entry you card number</label></p>
+        <p><label>ENTRY YOU CARD NUMBER</label></p>
         <spring:input path="number" placeholder="You card number..." maxlength="16"/><br/>
 
-        <input class="second" type="submit" value="OK">
+        <input type="submit" value="OK">
 
         <input type="reset" value="CLEAN">
 
